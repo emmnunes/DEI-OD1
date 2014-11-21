@@ -21,7 +21,7 @@ SET time_zone = "+00:00";
 -- Table structure for `rooms`
 --
 
-CREATE TABLE IF NOT EXISTS `rooms` (
+CREATE TABLE IF EXISTS `rooms` (
 `id` int NOT NULL,
   `room` varchar(255) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=128 DEFAULT CHARSET=latin1;
@@ -216,7 +216,7 @@ INSERT INTO `teachers` (`id`, `name`) VALUES
 (16, 'Carlos Manuel Robalo Lisboa Bento'),
 (17, 'Carlos Nuno Bizarro e Silva Laranjeiro'),
 (18, 'César A. Teixeira'),
-(19, 'David Fonseca Palma'),
+(19, 'David F. Palma'),
 (20, 'Edmundo Heitor Silva Monteiro'),
 (21, 'Eduardo Miguel Morgado Nunes'),
 (22, 'Ernesto Jorge Fernandes Costa'),
