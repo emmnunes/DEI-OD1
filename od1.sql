@@ -21,7 +21,7 @@ SET time_zone = "+00:00";
 -- Table structure for `rooms`
 --
 
-CREATE TABLE IF NOT EXISTS `rooms` (
+CREATE TABLE IF EXISTS `rooms` (
 `id` int NOT NULL,
   `room` varchar(255) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=128 DEFAULT CHARSET=latin1;
