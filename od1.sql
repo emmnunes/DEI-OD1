@@ -274,10 +274,22 @@ INSERT INTO `teachers` (`id`, `name`) VALUES
 CREATE TABLE IF NOT EXISTS `gabinete` (
 `id` int NOT NULL,
   `idpessoa` int NOT NULL,
-  `gabinte` varchar(255) NOT NULL
+  `numero` varchar(255) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
+--
+-- Data for the table `gabinete`
+--
 
+INSERT INTO `gabinete` (`id`, `idpessoa`, `numero`) VALUES
+(1, 1, ''),
+(2, 2, 'E5.4'),
+(3, 3, 'D2.5'),
+(4, 4, 'D3.13'),
+(5, 5, 'F1.1'),
+(6, 6, 'D3.5'),
+(7, 7, 'D3.22'),
+(8, 8, 'D2.20'),
 
 --
 -- Indexes for dumped tables
@@ -327,6 +339,11 @@ MODIFY `id` int NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 -- AUTO_INCREMENT for table `teachers`
 --
 ALTER TABLE `teachers`
+MODIFY `id` int NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=69;
+--
+-- AUTO_INCREMENT for table `gabinete`
+--
+ALTER TABLE `gabinete`
 MODIFY `id` int NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=69;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
