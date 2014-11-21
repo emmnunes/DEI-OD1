@@ -190,27 +190,26 @@ INSERT INTO `services` (`id`, `name`) VALUES
 
 CREATE TABLE IF NOT EXISTS `teachers` (
 `id` int NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `gabinete` varchar(255) NOT NULL
+  `name` varchar(255) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=latin1;
 
 --
 -- Data for the table `teachers`
 --
 
-INSERT INTO `teachers` (`id`, `name`,`gabinete`) VALUES
-(1, 'Alberto Jorge Lebre Cardoso',''),
-(2, 'Alcides Miguel Cachulo Aguiar Fonseca','E5.4'),
-(3, 'Alexandre Miguel dos Santos Martins Pinto', 'D2.5'),
-(4, 'Álvaro Manuel Reis da Rocha', 'D3.13'),
-(5, 'Ana Madalena de Sousa Vasconcelos Matos Boavida', 'F1.1'),
-(6, 'António Dourado Pereira Correia', 'D3.5'),
-(7, 'António Jorge Costa Granjal', 'D3.22'),
-(8, 'António Jorge Silva Cardoso', 'D2.20'),
+INSERT INTO `teachers` (`id`, `name`) VALUES
+(1, 'Alberto Jorge Lebre Cardoso'),
+(2, 'Alcides Miguel Cachulo Aguiar Fonseca'),
+(3, 'Alexandre Miguel dos Santos Martins Pinto'),
+(4, 'Álvaro Manuel Reis da Rocha'),
+(5, 'Ana Madalena de Sousa Vasconcelos Matos Boavida'),
+(6, 'António Dourado Pereira Correia'),
+(7, 'António Jorge Costa Granjal'),
+(8, 'António Jorge Silva Cardoso'),
 (9, 'António José Nunes Mendes'),
 (10, 'António Manuel Sucena Silveira Gomes'),
 (11, 'Bernardete Martins Ribeiro'),
-(12, 'Bruna Raquel Sousa'),
+(12, 'Bruna Raquel Santos Sousa'),
 (13, 'Bruno Miguel Brás Cabral'),
 (14, 'Carlos Eduardo Delgado Cerqueira'),
 (15, 'Carlos Manuel Mira da Fonseca'),
@@ -236,7 +235,7 @@ INSERT INTO `teachers` (`id`, `name`,`gabinete`) VALUES
 (35, 'João Manuel Frade Belo Bicker'),
 (36, 'João Paulo da Silva Machado Garcia Vilela'),
 (37, 'João Pedro Morais de Matos Moniz Ramos'),
-(38, 'João Proença Cunha'),
+(38, 'João Miguel Andrade Proença da Cunha'),
 (39, 'Karen Bennett'),
 (40, 'Licínio Gomes Roque'),
 (41, 'Luís Alexandre Serras Moura e Silva'),
@@ -261,12 +260,88 @@ INSERT INTO `teachers` (`id`, `name`,`gabinete`) VALUES
 (60, 'Pedro Miguel Amaral Melo da Cruz'),
 (61, 'Pedro Nuno San-Bento Furtado'),
 (62, 'Raul André Brajczewski Barbosa'),
-(63, 'Rui Alexandre Neves Craveirinha', ' '),
-(64, 'Rui Pedro Lourenço Miranda', 'D3.15'),
-(65, 'Rui Pedro Pinto Carvalho Paiva', 'D2.11'),
-(66, 'Tiago José dos Santos Martins da Cruz', 'D1.12'),
-(67, 'Tiago Rodrigues Baptista', 'D3.12 '),
-(68, 'Vasco Nuno Sousa Simões Pereira', 'D2.16');
+(63, 'Rui Alexandre Neves Craveirinha'),
+(64, 'Rui Pedro Lourenço Miranda'),
+(65, 'Rui Pedro Pinto Carvalho Paiva'),
+(66, 'Tiago José dos Santos Martins da Cruz'),
+(67, 'Tiago Rodrigues Baptista'),
+(68, 'Vasco Nuno Sousa Simões Pereira');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for `offices`
+--
+
+CREATE TABLE IF NOT EXISTS `offices` (
+`id` int NOT NULL,
+  `roomID` int NOT NULL,
+  `teacherID` int NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=latin1;
+
+--
+-- Data for the table `offices`
+--
+
+INSERT INTO `offices` (`id`, `roomID`, `teacherID`) VALUES
+(1, 28, 13),
+(2, 30, 61),
+(3, 31, 66),
+(4, 32, 19),
+(5, 34, 31),
+(6, 36, 11),
+(7, 37, 25),
+(8, 38, 27),
+(9, 39, 44),
+(10, 40, 46),
+(11, 41, 45),
+(12, 42, 3),
+(13, 43, 1),
+(14, 44, 32),
+(15, 45, 54),
+(16, 46, 30),
+(17, 47, 15),
+(18, 48, 65),
+(19, 50, 59),
+(20, 52, 56),
+(21, 53, 68),
+(22, 55, 42),
+(23, 56, 57),
+(24, 57, 8),
+(25, 58, 24),
+(26, 59, 18),
+(27, 62, 16),
+(28, 63, 49),
+(29, 64, 26),
+(30, 66, 23),
+(31, 67, 34),
+(32, 68, 6),
+(33, 69, 22),
+(34, 70, 47),
+(35, 72, 36),
+(36, 73, 40),
+(37, 74, 62),
+(38, 75, 67),
+(39, 76, 4),
+(40, 77, 17),
+(41, 78, 64),
+(42, 79, 53),
+(43, 80, 14),
+(44, 80, 58),
+(45, 82, 33),
+(46, 83, 48),
+(47, 84, 20),
+(48, 85, 7),
+(49, 86, 9),
+(50, 107, 5),
+(51, 107, 10),
+(52, 107, 12),
+(53, 107, 21),
+(54, 107, 38),
+(55, 107, 35),
+(56, 107, 51),
+(57, 107, 52),
+(58, 107, 60);
 
 --
 -- Table structure for `officehours`
@@ -276,17 +351,20 @@ CREATE TABLE IF NOT EXISTS `officehours` (
 `id` int NOT NULL,
   `iddocente` int NOT NULL,
   `dia` varchar(255) NOT NULL,
-  `hora` varchar(255) NOT NULL,
-  `sala` varchar(255) NOT NULL
+  `hora` varchar(255) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
--- Data for the table `services`
+-- Data for the table `officehours`
 --
 
 INSERT INTO `officehours` (`id`, `iddocente`,'dia','hora') VALUES
-(1, 1,'','',''),
-(2, 2, 'Quinta-feira', '14h-16h','E5.4');
+(1, 1,'',''),
+(2, 2, 'Quinta-feira', '14h-16h');
+(3, 3, 'Quarta-feira', '14h-19h');
+(4, 4, 'Quarta-feira', '14h-17h');
+(5, 5, 'Segunda-feira', '11h-12h');
+
 
 --
 -- Indexes for dumped tables
@@ -308,6 +386,12 @@ ALTER TABLE `services`
 -- Indexes for table `teachers`
 --
 ALTER TABLE `teachers`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `offices`
+--
+ALTER TABLE `offices`
  ADD PRIMARY KEY (`id`);
  
 --
@@ -338,11 +422,15 @@ MODIFY `id` int NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 ALTER TABLE `teachers`
 MODIFY `id` int NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=69;
 --
+-- AUTO_INCREMENT for table `offices`
+--
+ALTER TABLE `offices`
+MODIFY `id` int NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=59;
+--
 -- AUTO_INCREMENT for table `officehours`
 --
 ALTER TABLE `officehours`
 MODIFY `id` int NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=269;
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
