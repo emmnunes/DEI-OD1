@@ -167,7 +167,8 @@ INSERT INTO `rooms` (`id`, `room`) VALUES
 
 CREATE TABLE IF NOT EXISTS `services` (
 `id` int NOT NULL,
-  `name` varchar(255) NOT NULL
+  `name` varchar(255) NOT NULL,
+  `gabinete` varchar(255) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
