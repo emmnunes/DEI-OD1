@@ -197,15 +197,15 @@ CREATE TABLE IF NOT EXISTS `teachers` (
 -- Data for the table `teachers`
 --
 
-INSERT INTO `teachers` (`id`, `name`) VALUES
-(1, 'Alberto Jorge Lebre Cardoso'),
-(2, 'Alcides Miguel Cachulo Aguiar Fonseca'),
-(3, 'Alexandre Miguel dos Santos Martins Pinto'),
-(4, 'Álvaro Manuel Reis da Rocha'),
-(5, 'Ana Madalena de Sousa Vasconcelos Matos Boavida'),
-(6, 'António Dourado Pereira Correia'),
-(7, 'António Jorge Costa Granjal'),
-(8, 'António Jorge Silva Cardoso'),
+INSERT INTO `teachers` (`id`, `name`,`gabinete`) VALUES
+(1, 'Alberto Jorge Lebre Cardoso',''),
+(2, 'Alcides Miguel Cachulo Aguiar Fonseca','E5.4'),
+(3, 'Alexandre Miguel dos Santos Martins Pinto', 'D2.5'),
+(4, 'Álvaro Manuel Reis da Rocha', 'D3.13'),
+(5, 'Ana Madalena de Sousa Vasconcelos Matos Boavida', 'F1.1'),
+(6, 'António Dourado Pereira Correia', 'D3.5'),
+(7, 'António Jorge Costa Granjal', 'D3.22'),
+(8, 'António Jorge Silva Cardoso', 'D2.20'),
 (9, 'António José Nunes Mendes'),
 (10, 'António Manuel Sucena Silveira Gomes'),
 (11, 'Bernardete Martins Ribeiro'),
@@ -278,20 +278,6 @@ CREATE TABLE IF NOT EXISTS `gabinete` (
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
--- Data for the table `gabinete`
---
-
-INSERT INTO `gabinete` (`id`, `idpessoa`, `numero`) VALUES
-(1, 1, ''),
-(2, 2, 'E5.4'),
-(3, 3, 'D2.5'),
-(4, 4, 'D3.13'),
-(5, 5, 'F1.1'),
-(6, 6, 'D3.5'),
-(7, 7, 'D3.22'),
-(8, 8, 'D2.20'),
-
---
 -- Indexes for dumped tables
 --
 
@@ -314,14 +300,6 @@ ALTER TABLE `teachers`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `gabinete`
---
-ALTER TABLE `gabinete`
- ADD PRIMARY KEY (`id`),
- ADD FOREIGN KEY (`idpessoa`) REFERENCES teachers(`id`);
-
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -340,11 +318,7 @@ MODIFY `id` int NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 ALTER TABLE `teachers`
 MODIFY `id` int NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=69;
---
--- AUTO_INCREMENT for table `gabinete`
---
-ALTER TABLE `gabinete`
-MODIFY `id` int NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=69;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
