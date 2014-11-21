@@ -167,8 +167,7 @@ INSERT INTO `rooms` (`id`, `room`) VALUES
 
 CREATE TABLE IF NOT EXISTS `services` (
 `id` int NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `gabinete` varchar(255) NOT NULL
+  `name` varchar(255) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
@@ -191,7 +190,8 @@ INSERT INTO `services` (`id`, `name`) VALUES
 
 CREATE TABLE IF NOT EXISTS `teachers` (
 `id` int NOT NULL,
-  `name` varchar(255) NOT NULL
+  `name` varchar(255) NOT NULL,
+  `gabinete` varchar(255) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=latin1;
 
 --
@@ -261,22 +261,32 @@ INSERT INTO `teachers` (`id`, `name`,`gabinete`) VALUES
 (60, 'Pedro Miguel Amaral Melo da Cruz'),
 (61, 'Pedro Nuno San-Bento Furtado'),
 (62, 'Raul André Brajczewski Barbosa'),
-(63, 'Rui Alexandre Neves Craveirinha'),
-(64, 'Rui Pedro Lourenço Miranda'),
-(65, 'Rui Pedro Pinto Carvalho Paiva'),
-(66, 'Tiago José dos Santos Martins da Cruz'),
-(67, 'Tiago Rodrigues Baptista'),
-(68, 'Vasco Nuno Sousa Simões Pereira');
+(63, 'Rui Alexandre Neves Craveirinha', ' '),
+(64, 'Rui Pedro Lourenço Miranda', 'D3.15'),
+(65, 'Rui Pedro Pinto Carvalho Paiva', 'D2.11'),
+(66, 'Tiago José dos Santos Martins da Cruz', 'D1.12'),
+(67, 'Tiago Rodrigues Baptista', 'D3.12 '),
+(68, 'Vasco Nuno Sousa Simões Pereira', 'D2.16');
 
 --
--- Table structure for `gabinete`
+-- Table structure for `officehours`
 --
 
-CREATE TABLE IF NOT EXISTS `gabinete` (
+CREATE TABLE IF NOT EXISTS `officehours` (
 `id` int NOT NULL,
-  `idpessoa` int NOT NULL,
-  `numero` varchar(255) NOT NULL
+  `iddocente` int NOT NULL,
+  `dia` varchar(255) NOT NULL,
+  `hora` varchar(255) NOT NULL,
+  `sala` varchar(255) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- Data for the table `services`
+--
+
+INSERT INTO `officehours` (`id`, `iddocente`,'dia','hora') VALUES
+(1, 1,'','',''),
+(2, 2, 'Quinta-feira', '14h-16h','E5.4');
 
 --
 -- Indexes for dumped tables
@@ -299,6 +309,14 @@ ALTER TABLE `services`
 --
 ALTER TABLE `teachers`
  ADD PRIMARY KEY (`id`);
+ 
+--
+-- Indexes for table `officehours`
+--
+ALTER TABLE `officehours`
+ ADD PRIMARY KEY (`id`),
+ ADD FOREIGN KEY (`iddocente`) REFERENCES teachers('id');
+
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -319,6 +337,11 @@ MODIFY `id` int NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 ALTER TABLE `teachers`
 MODIFY `id` int NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=69;
+--
+-- AUTO_INCREMENT for table `officehours`
+--
+ALTER TABLE `officehours`
+MODIFY `id` int NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=269;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
