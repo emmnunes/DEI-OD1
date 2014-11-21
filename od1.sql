@@ -268,6 +268,18 @@ INSERT INTO `teachers` (`id`, `name`) VALUES
 (68, 'Vasco Nuno Sousa Simões Pereira');
 
 --
+-- Table structure for `gabinete`
+--
+
+CREATE TABLE IF NOT EXISTS `gabinete` (
+`id` int NOT NULL,
+  `idpessoa` int NOT NULL,
+  `gabinte` varchar(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+
+
+--
 -- Indexes for dumped tables
 --
 
@@ -288,6 +300,14 @@ ALTER TABLE `services`
 --
 ALTER TABLE `teachers`
  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `gabinete`
+--
+ALTER TABLE `gabinete`
+ ADD PRIMARY KEY (`id`),
+ ADD FOREIGN KEY (`idpessoa`) REFERENCES teachers(`id`);
+
 
 --
 -- AUTO_INCREMENT for dumped tables
