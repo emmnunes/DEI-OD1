@@ -352,19 +352,117 @@ CREATE TABLE IF NOT EXISTS `officehours` (
   `iddocente` int NOT NULL,
   `dia` varchar(255) NOT NULL,
   `hora` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=104 DEFAULT CHARSET=latin1;
 
 --
 -- Data for the table `officehours`
 --
 
 INSERT INTO `officehours` (`id`, `iddocente`,'dia','hora') VALUES
-(1, 1,'',''),
-(2, 2, 'Quinta-feira', '14h-16h');
-(3, 3, 'Quarta-feira', '14h-19h');
-(4, 4, 'Quarta-feira', '14h-17h');
-(5, 5, 'Segunda-feira', '11h-12h');
-
+(1, 2, 'Quinta-feira', '14h-16h'),
+(2, 3, 'Quarta-feira', '14h-19h'),
+(3, 4, 'Quarta-feira', '14h-17h'),
+(4, 5, 'Segunda-feira', '11h-12h'),
+(5, 6, 'Segunda-feira', '14h-15h'),
+(6, 6, 'Quarta-feira', '11h-13h'),
+(7, 6, 'Quinta-feira', '16h-18h'),
+(8, 7, 'Sexta-feira','09h-11h'),
+(9, 7, 'Sexta-feira','14h-15h'),
+(10, 8, 'Segunda-feira','09h-10h'),
+(11, 8, 'Segunda-feira','13h-14h'),
+(12, 8, 'Terça-feira','11h-12h'),
+(13, 8, 'Terça-feira','14h-15h'),
+(14, 8, 'Terça-feira','17h-18h'),
+(15, 9, 'Segunda-feira','12h-12h30'),
+(16, 9, 'Quarta-feira','12h-13h'),
+(17, 10, 'Segunda-feira','16h-18h'),
+(18, 10, 'Quinta-feira','18h-20h'),
+(19, 12, 'Quinta-feira','11h-13h'),
+(20, 13, 'Terça-feira','14h-18h'),
+(21, 14, 'Sexta-feira','08h-11h'),
+(22, 15, 'Quinta-feira','17h-19h'),
+(23, 15, 'Terça-feira','09h-11h'),
+(24, 16, 'Segunda-feira','12h30-15h'),
+(25, 16, 'Sexta-feira','14h30-17h'),
+(26, 17, 'Sexta-feira','14h-16h'),
+(27, 17, 'Sexta-feira','18h-19h'),
+(28, 18, 'Quarta-feira','09h-12h'),
+(29, 19, 'Terça-feira','09h-13h'),
+(30, 19, 'Terça-feira','18h-19h'),
+(31, 20, 'Terça-feira','14h-17h30'),
+(32, 20, 'Quinta-feira','09h-10h'),
+(33, 20, 'Quinta-feira','12h-12h30'),
+(34, 21, 'Sexta-feira','16h-18h'),
+(35, 21, 'Segunda-feira','18h-19h'),
+(36, 22, 'Quinta-feira','09h-13h'),
+(37, 24, 'Terça-feira','11h-13h'),
+(38, 24, 'Terça-feira','14h-17h'),
+(39, 25, 'Segunda-feira','09h-13h'),
+(40, 26, 'Segunda-feira','08h30-12h'),
+(41, 27, 'Quinta-feira','10h-12h'),
+(42, 27, 'Quinta-feira','13h-16h'),
+(43, 29, 'Quinta-feira','14h30-19h30'),
+(44, 30, 'Quarta-feira','11h-13h'),
+(45, 30, 'Sexta-feira','09h-11h'),
+(46, 30, 'Sexta-feira','14h-15h'),
+(47, 31, 'Segunda-feira','11h-13h'),
+(48, 31, 'Segunda-feira','14h-16h'),
+(49, 31, 'Quinta-feira','14h-16h'),
+(50, 32, 'Quarta-feira','13h-15h'),
+(51, 33, 'Segunda-feira','09h-12h'),
+(52, 33, 'Quinta-feira','09h-12h'),
+(53, 35, 'Quinta-feira','16h-18h'),
+(54, 35, 'Sexta-feira','17h-20h'),
+(55, 36, 'Terça-feira','10h-15h'),
+(56, 37, 'Quarta-feira','09h-11h'),
+(57, 37, 'Sexta-feira','09h-11h'),
+(58, 38, 'Sexta-feira','09h-11h'),
+(59, 40, 'Terça-feira','08h-13h'),
+(60, 41, 'Terça-feira','16h20h'),
+(61, 42, 'Sexta-feira','09h-12h'),
+(62, 44, 'Quarta-feira','14h-17h'),
+(63, 44, 'Sexta-feira','14h-16h'),
+(64, 45, 'Quinta-feira','09h-10h'),
+(65, 45, 'Terça-feira','09h-13h'),
+(66, 46, 'Quarta-feira','14h-18h30'),
+(67, 48, 'Segunda-feira','14h-18h'),
+(68, 49, 'Quinta-feira','11h-13h'),
+(69, 49, 'Sexta-feira','11h-15h'),
+(70, 49, 'Sexta-feira','17h-18h'),
+(71, 50, 'Segunda-feira','20h-21h'),
+(72, 50, 'Quinta-feira','20h-21h'),
+(73, 51, 'Quarta-feira','10h-11h'),
+(74, 51, 'Quinta-feira','11h-13h'),
+(75, 51, 'Sexta-feira','11h-13h'),
+(76, 52, 'Terça-feira','12h-13h'),
+(77, 52, 'Quinta-feira','09h-11h'),
+(78, 53, 'Sexta-feira','09h-10h'),
+(79, 53, 'Sexta-feira','12h-13h'),
+(80, 54, 'Terça-feira','14h-18h'),
+(81, 54, 'Quinta-feira','12h-13h'),
+(82, 55, 'Sexta-feira','17h-20h'),
+(83, 56, 'Segunda-feira','10h-13h'),
+(84, 57, 'Segunda-feira','13h-16h'),
+(85, 57, 'Sexta-feira','14h-15h'),
+(86, 57, 'Sexta-feira','19h-20h'),
+(87, 58, 'Terça-feira','11h-12h'),
+(88, 58, 'Sexta-feira','11h-12h'),
+(89, 59, 'Quinta-feira','10h-12h'),
+(90, 59, 'Terça-feira','10h-12h'),
+(91, 60, 'Terça-feira','16h-18h'),
+(92, 61, 'Sexta-feira','09h-12h'),
+(93, 62, 'Segunda-feira','10h30-13h'),
+(94, 62, 'Terça-feira','10h30-12h30'),
+(95, 64, 'Segunda-feira','17h-18h30'),
+(96, 64, 'Sexta-feira','08h30-10h'),
+(97, 65, 'Terça-feira','09h-10h'),
+(98, 65, 'Terça-feira','14h30-18h30'),
+(99, 66, 'Quarta-feira','09h-12h'),
+(100, 66, 'Quarta-feira','14h-16h'),
+(101, 67, 'Quinta-feira','17h-19h'),
+(101, 67, 'Sexta-feira','10h-12h'),
+(102, 68, 'Terça-feira','14h-16h'),
+(103, 68, 'Sexta-feira','14h-17h');
 
 --
 -- Indexes for dumped tables
@@ -398,8 +496,7 @@ ALTER TABLE `offices`
 -- Indexes for table `officehours`
 --
 ALTER TABLE `officehours`
- ADD PRIMARY KEY (`id`),
- ADD FOREIGN KEY (`iddocente`) REFERENCES teachers('id');
+ ADD PRIMARY KEY (`id`);
 
 
 --
@@ -430,7 +527,7 @@ MODIFY `id` int NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=59;
 -- AUTO_INCREMENT for table `officehours`
 --
 ALTER TABLE `officehours`
-MODIFY `id` int NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=269;
+MODIFY `id` int NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=104;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
