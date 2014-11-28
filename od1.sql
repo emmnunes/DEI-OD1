@@ -393,7 +393,7 @@ CREATE TABLE IF NOT EXISTS `officehours` (
 -- Data for the table `officehours`
 --
 
-INSERT INTO `officehours` (`id`, `iddocente`,'dia','hora') VALUES
+INSERT INTO `officehours` (`id`, `iddocente`,`dia`,`hora`) VALUES
 (1, 2, 'Quinta-feira', '14h-16h'),
 (2, 3, 'Quarta-feira', '14h-19h'),
 (3, 4, 'Quarta-feira', '14h-17h'),
@@ -495,9 +495,9 @@ INSERT INTO `officehours` (`id`, `iddocente`,'dia','hora') VALUES
 (99, 66, 'Quarta-feira','09h-12h'),
 (100, 66, 'Quarta-feira','14h-16h'),
 (101, 67, 'Quinta-feira','17h-19h'),
-(101, 67, 'Sexta-feira','10h-12h'),
-(102, 68, 'Terça-feira','14h-16h'),
-(103, 68, 'Sexta-feira','14h-17h');
+(102, 67, 'Sexta-feira','10h-12h'),
+(103, 68, 'Terça-feira','14h-16h'),
+(104, 68, 'Sexta-feira','14h-17h');
 
 --
 -- Indexes for dumped tables
@@ -574,7 +574,7 @@ MODIFY `id` int NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 -- AUTO_INCREMENT for table `officehours`
 --
 ALTER TABLE `officehours`
-MODIFY `id` int NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=104;
+MODIFY `id` int NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=105;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
