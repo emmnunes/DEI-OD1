@@ -35,8 +35,8 @@ CREATE TABLE IF NOT EXISTS `rooms` (
 
 INSERT INTO `rooms` (`id`, `room`, `floor`, `tower`,`roomtype`) VALUES
 (1, 'A4.3', 4, 'A','services'),
-(2, 'A5.4', 5, 'A','services'),
-(3, 'A6.1', 6, 'A','services'),
+(2, 'A5.4', 5, 'A','study room'),
+(3, 'A6.1', 6, 'A','study room'),
 (4, 'B1', 4, 'B','auditorium'),
 (5, 'B2', 5, 'B','auditorium'),
 (6, 'C4.1', 4, 'C','study room'),
@@ -44,7 +44,7 @@ INSERT INTO `rooms` (`id`, `room`, `floor`, `tower`,`roomtype`) VALUES
 (8, 'C4.3', 4, 'C','services'),
 (9, 'C4.4', 4, 'C','study room'),
 (10, 'C4.5', 4, 'C','study room'),
-(11, 'C4.6', 4, 'C','common room'),
+(11, 'C4.6', 4, 'C','study room'),
 (12, 'C5.1', 5, 'C','classroom'),
 (13, 'C5.2', 5, 'C','classroom'),
 (14, 'C5.3', 5, 'C','classroom'),
@@ -364,7 +364,7 @@ CREATE TABLE IF NOT EXISTS `service_rooms` (
 `id` int NOT NULL,
   `serviceID` int NOT NULL,
   `roomID` int NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 --
 -- Data for the table `service_rooms`
@@ -381,7 +381,8 @@ INSERT INTO `service_rooms` (`id`, `serviceID`, `roomID`) VALUES
 (8, 7, 6),
 (9, 7, 9),
 (10, 7, 10),
-(11, 7, 11);
+(11, 7, 11),
+(12, 7, 2);
 
 --
 -- Table structure for `officehours`
@@ -618,7 +619,7 @@ MODIFY `id` int NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=59;
 -- AUTO_INCREMENT for table `service_rooms`
 --
 ALTER TABLE `service_rooms`
-MODIFY `id` int NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
+MODIFY `id` int NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `officehours`
 --
