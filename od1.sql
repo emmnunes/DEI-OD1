@@ -504,6 +504,45 @@ INSERT INTO `officehours` (`id`, `iddocente`,`dia`,`hora`) VALUES
 (104, 68, 'Sexta-feira','14h-17h');
 
 
+
+--
+-- Table structure for `facilities`
+--
+
+CREATE TABLE IF NOT EXISTS `facilities` (
+`id` int NOT NULL,
+  `room` int NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+
+--
+-- Data for the table `facilities`
+--
+
+INSERT INTO `facilities` (`id`, `room`) VALUES
+(1, 'WC.D1.1'),
+(2, 'WC.D1.2'),
+(3, 'WC.D2.1'),
+(4, 'WC.D2.2'),
+(5, 'WC.D3.1'),
+(6, 'WC.D3.2'),
+(7, 'WC.A4.1'),
+(8, 'WC.A4.2'),
+(9, 'WC.A4.3'),
+(10, 'WC.A4.4'),
+(11, 'WC.C5.1'),
+(12, 'WC.C5.2'),
+(13, 'WC.E5.1'),
+(14, 'WC.E5.2'),
+(15, 'WC.G5.1'),
+(16, 'WC.G5.2'),
+(17, 'WC.A6.3'),
+(18, 'WC.C6.1'),
+(19, 'WC.C6.2'),
+(20, 'WC.E6.1'),
+(21, 'WC.E6.2'),
+(22, 'WC.G6.1'),
+(23, 'WC.G6.2');
+
 --
 -- Indexes for dumped tables
 --
@@ -545,6 +584,12 @@ ALTER TABLE `officehours`
  ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `facilities`
+--
+ALTER TABLE `facilities`
+ ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -578,6 +623,11 @@ MODIFY `id` int NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 --
 ALTER TABLE `officehours`
 MODIFY `id` int NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=105;
+--
+-- AUTO_INCREMENT for table `facilities`
+--
+ALTER TABLE `facilities`
+MODIFY `id` int NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
